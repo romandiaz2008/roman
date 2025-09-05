@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Piropos para mi amor</title>
+  <title>Piropos para Lula Granja 💖</title>
   <style>
     body {
-      background: linear-gradient(135deg, #ffdde1, #ee9ca7);
-      font-family: 'Arial Rounded MT Bold', sans-serif;
+      background: linear-gradient(135deg, #ffb6c1, #ff69b4);
+      font-family: "Comic Sans MS", cursive, sans-serif;
       text-align: center;
       padding: 30px;
       color: #fff;
@@ -16,23 +16,24 @@
     h1 {
       font-size: 2rem;
       margin-bottom: 20px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
     }
 
     #piropo {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       margin: 20px auto;
       padding: 20px;
       background: rgba(255,255,255,0.2);
       border-radius: 20px;
-      min-height: 80px;
+      min-height: 120px;
+      max-width: 700px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
     button {
-      background: #ff4d6d;
+      background: #ff4081;
       border: none;
       border-radius: 12px;
       padding: 15px 25px;
@@ -46,37 +47,62 @@
     }
 
     button:hover {
-      background: #e63956;
+      background: #e91e63;
       transform: scale(1.05);
     }
   </style>
 </head>
 <body>
-  <h1>💖 Piropos para mi amor 💖</h1>
+  <h1>💖 Piropos para Lula Granja 💖</h1>
 
-  <div id="piropo">Tocá un botón y sorprendete ✨</div>
+  <div id="piropo">Tocá el botón y descubrí cuánto te amo ✨</div>
 
-  <button onclick="nuevoPiropo()">💌 Dame un piropo</button>
-  <button onclick="teAmo()">❤️ Te amo</button>
+  <button onclick="mostrarPiropo()">💌 Dame un piropo</button>
 
   <script>
-    const piropos = [
-      "Eres la razón por la que sonrío sin motivo.",
-      "Si fueras un sueño, nunca querría despertar.",
-      "Tus abrazos son mi lugar favorito en el mundo.",
-      "Desde que llegaste, todo es más bonito.",
-      "No necesito estrellas, porque ya tengo tu mirada.",
-      "Cada día a tu lado es el mejor regalo."
+    let piropos = [
+      "Lula, cada día que pasa me sorprende más tu capacidad de superar cualquier obstáculo con inteligencia y amor.",
+      "No hay persona en el mundo que me inspire tanto como vos. Tu esfuerzo, tu pasión y tu ternura me hacen admirarte sin límites.",
+      "Cuando pienso en el futuro, solo puedo imaginarlo a tu lado, porque sé que juntos podemos con todo.",
+      "Tu inteligencia brilla más que cualquier estrella en el cielo, y tu bondad hace que todo a tu alrededor sea más cálido.",
+      "Sos la prueba viviente de que se puede ser fuerte y dulce al mismo tiempo, y por eso te amo tanto.",
+      "Lula, me enamoro cada día más de tu manera de pensar, de cómo enfrentás la vida y de cómo me hacés sentir amado.",
+      "Eres capaz de todo lo que te propongas, y me llena de orgullo saber que camino a tu lado.",
+      "Tu sonrisa tiene el poder de cambiar un mal día en uno inolvidable.",
+      "Sos tan brillante que hasta las dudas se vuelven pequeñas cuando estás cerca.",
+      "Amor, no solo sos hermosa, sos un ejemplo de esfuerzo y de luz para todos los que te rodean.",
+      "Tus palabras son medicina para mi corazón, porque cada vez que me hablás siento paz.",
+      "Me asombra lo creativa que sos, cómo encontrás soluciones donde otros solo ven problemas.",
+      "Estar con vos es aprender a diario, porque tu mente y tu corazón son un universo increíble.",
+      "Eres mi refugio, mi alegría y la inspiración que me motiva a ser mejor cada día.",
+      "Cada logro tuyo es una fiesta en mi corazón, porque sé cuánto valés.",
+      "Lula, sos el mejor regalo que me dio la vida: una persona inteligente, capaz, hermosa y llena de amor.",
+      "Tus ojos no solo son lindos: son la ventana a una mente brillante y a un alma gigante.",
+      "Nunca conocí a alguien tan fuerte y tan sensible a la vez. Esa combinación tuya me enamora sin remedio.",
+      "Tu manera de amar me enseña lo que significa ser feliz de verdad.",
+      "Eres la razón por la que creo en los milagros, porque encontrarte fue el más grande de todos.",
+      "Tu ternura y tu inteligencia me tienen hipnotizado, no hay escapatoria: estoy perdido de amor por vos.",
+      "Sos única, porque un corazón tan grande y una mente tan clara no se encuentran todos los días.",
+      "Cuando te miro, no solo veo a la mujer que amo, sino a la persona más capaz y valiente que existe.",
+      "Amor, tu voz es melodía y tus palabras son poesía que me hacen soñar despierto.",
+      "Nunca me voy a cansar de repetirlo: sos increíble, y el mundo es mejor gracias a vos.",
+      "Tu amor me da fuerzas, y tu inteligencia me inspira a crecer. Sos todo lo que necesito.",
+      "Lula, sos mi ejemplo de que se puede ser brillante y humilde al mismo tiempo.",
+      "No hay meta que no puedas alcanzar, y yo estaré siempre para aplaudirte y amarte.",
+      "Gracias por existir, por enseñarme, por amarme y por demostrarme cada día lo mucho que valés.",
+      "Te amo con toda mi alma, Lula. Nunca dudes de lo especial, capaz e importante que sos para mí y para el mundo."
     ];
 
-    function nuevoPiropo() {
+    function mostrarPiropo() {
+      if (piropos.length === 0) {
+        document.getElementById("piropo").innerText = "Ya viste todos mis piropos 💖, pero siempre inventaré más para vos.";
+        return;
+      }
       const random = Math.floor(Math.random() * piropos.length);
-      document.getElementById("piropo").innerText = piropos[random];
-    }
-
-    function teAmo() {
-      document.getElementById("piropo").innerText = "❤️ Te amo con todo mi corazón ❤️";
+      const elegido = piropos.splice(random, 1)[0]; // Saca el piropo para que no se repita
+      document.getElementById("piropo").innerText = elegido;
     }
   </script>
 </body>
 </html>
+
